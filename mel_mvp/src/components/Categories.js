@@ -12,12 +12,10 @@ class Categories extends Component {
   changeCategory = e => {
     this.setState({
       category: e.target.value
+    }, () => { // PREGUNTAR ESTO! No acabo de entender...
+      this.props.getNews(this.state.category); // Send category's value (data) to App.js, using props
     })
-
-    // Send category's value (data) to App.js, using props
-    this.props.getNews(this.state.category);
   }
-
 
 
   render() {
