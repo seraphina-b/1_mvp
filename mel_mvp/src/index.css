@@ -5,15 +5,26 @@ body {
   background-color: #6CC3D5;
 }
 
+/* ------------------APP.js---------------- */
+
 .news-container {
   padding: 2rem;
   border-radius: 1rem;
   margin-top: 3rem;
 }
 
+/* ------------------CATEGORIES.js---------------- */
+
 .searcher {
   margin-top: 2rem;
   margin-bottom: 2rem;
   text-align: left;
 
+}
+
+/* ------------------ARTICLE.js---------------- */
+
+.source-name {
+  padding: 0.5rem;
+  margin-bottom: 0;
 }

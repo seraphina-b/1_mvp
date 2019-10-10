@@ -18,9 +18,9 @@ class App extends Component {
     this.getNews();
   }
 
-  getNews = async () => {
+  getNews = async (category = 'general') => { //general is the default value for category
     const key = '3e11a22e58cd4a75bfbcb6a7b432027a'
-    const url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${key}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${key}`;
 
     const answer = await fetch(url);
     const news = await answer.json();
@@ -40,7 +40,9 @@ class App extends Component {
         />
 
         <div className='container bg-white news-container'> {/*need bootsrap class CONTAINER, dentro ROW (NewsList.js) y luego COL (Article.js)*/}
-          <Categories />
+          <Categories
+            getNews={this.getNews}
+          />
           <NewsList
             news={this.state.news}
           />

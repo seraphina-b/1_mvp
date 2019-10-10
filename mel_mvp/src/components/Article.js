@@ -10,7 +10,7 @@ const Article = ({ article }) => {
   const image = urlToImage ? (
     <div>
       <img src={urlToImage} alt={title} className='card-img-top' />
-      <span>{source.name}</span>
+      <h6 className="source-name">{source.name}</h6>
 
     </div>
   ) : null;
@@ -20,7 +20,7 @@ const Article = ({ article }) => {
       <div className='card'>
         {image}
         <div className="card-body">
-          <h5 className="card-title">{title}</h5>
+          <h5 className="card-title font-weight-bold">{title}</h5>
           <p className="card-text">{description}</p>
           <a href={url} target='_blank' rel='noopener noreferrer' className="btn btn-primary">Read Article</a>
         </div>
