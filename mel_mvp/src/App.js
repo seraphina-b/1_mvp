@@ -38,7 +38,7 @@ class App extends Component {
           title='News API'
         />
 
-        <div className='container bg-white news-container'>
+        <div className='container bg-white news-container'> {/*need bootsrap class CONTAINER, dentro ROW (NewsList.js) y luego COL (Article.js)*/}
           <NewsList
             news={this.state.news}
           />
