@@ -8,12 +8,15 @@ const Article = ({ article }) => {
   // show image only if available - use ternary operator
 
   const image = urlToImage ? (
-    <img src={urlToImage} alt={title} className='card-img-top' />
-    <span className='card-title'>{source.name}</span>
-    ) : null;
+    <div>
+      <img src={urlToImage} alt={title} className='card-img-top' />
+      <span>{source.name}</span>
+
+    </div>
+  ) : null;
 
   return (
-    <div className='col col-sm-12 col-md-6 col-lg-4'>
+    <div className='col-12 col-md-6 col-lg-4'>
       <div className='card'>
         {image}
         <div className="card-body">

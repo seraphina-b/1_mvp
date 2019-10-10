@@ -10,3 +10,10 @@ body {
   border-radius: 1rem;
   margin-top: 3rem;
 }
+
+.searcher {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+
+}

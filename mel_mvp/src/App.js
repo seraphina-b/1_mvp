@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import NewsList from './components/NewsList';
+import Categories from './components/Categories';
 
 // import './App.css';
 
@@ -39,6 +40,7 @@ class App extends Component {
         />
 
         <div className='container bg-white news-container'> {/*need bootsrap class CONTAINER, dentro ROW (NewsList.js) y luego COL (Article.js)*/}
+          <Categories />
           <NewsList
             news={this.state.news}
           />
