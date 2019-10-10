@@ -21,7 +21,7 @@ class Categories extends Component {
   render() {
     return (
       <div className='row searcher'>
-        <div className='col-sm-12 col-md-8 '>
+        <div className='col-sm-12 col-md-8'>
           <form>
             <h2>Find News by Category</h2>
 
