@@ -31,7 +31,6 @@ class App extends Component {
     console.log(news.articles);
   }
 
-
   render() {
     return (
       <div>
