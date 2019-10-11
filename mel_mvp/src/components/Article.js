@@ -82,7 +82,7 @@ class Article extends Component {
               // target='_blank'
               // rel='noopener noreferrer'
               className="btn btn-primary text-white"
-            // onClick={}  la función que se invoque en onclick (handleRead()) tiene que ...????
+            // onClick={}  la función que se invoque en onclick (handleRead()) tiene que ...???? tiene que enviar algo a su padre newsList para que muestre el correspondiente 'FullArticle'. 
             >Read Article</button>
             <button
               className="btn btn-primary text-white"
