@@ -28,3 +28,13 @@ body {
   padding: 0.5rem;
   margin-bottom: 0;
 }
+
+/* ------------------FOOTER.js---------------- */
+
+.footer-container {
+  margin-top: 3rem;
+  height: 30vh;
+  text-align: center;
+  background-color: #dfe0e1;
+
+}

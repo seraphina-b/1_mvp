@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import NewsList from './components/NewsList';
 import Categories from './components/Categories';
+import Footer from './components/Footer';
 
 // import './App.css';
 
@@ -35,7 +36,7 @@ class App extends Component {
     return (
       <div>
         <Header
-          title='News API'
+          title='News US'
         />
 
         <div className='container bg-white news-container'> {/*need bootsrap class CONTAINER, dentro ROW (NewsList.js) y luego COL (Article.js)*/}
@@ -46,6 +47,9 @@ class App extends Component {
             news={this.state.news}
           />
         </div>
+
+        <Footer className='container' />
+
       </div>
     )
   }
