@@ -22,18 +22,6 @@ class App extends Component {
     this.getNews();
   }
 
-  handleInputChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value,
-      filteredNews: this.state.news.filter(item => {
-        if (item.title.includes(this.state.search)) {
-          return true
-        }
-        return false
-      })
-    });
-    console.log(this.state.search);
-  }
 
   getNews = async (category = 'general') => { //general is the default value for category
     const key = '3e11a22e58cd4a75bfbcb6a7b432027a'
@@ -45,7 +33,7 @@ class App extends Component {
     this.setState({
       news: news.articles,
       filteredNews: news.articles.filter(item => {
-        if (item.title.includes(this.state.search)) {
+        if (item.title.toLowerCase().includes(this.state.search.toLowerCase())) {
           return true
         }
         return false
@@ -53,7 +41,6 @@ class App extends Component {
     })
     console.log(news.articles);
     console.log(this.state.filteredNews);
-
   }
 
   updateView(newView) {
@@ -64,9 +51,13 @@ class App extends Component {
 
   handleInputChange(event) {
     this.setState({
-      [event.target.name]: event.target.value
-
-      //'name' corresponde a cada KEY dentro del objeto 'state'. Este 'name' tiene que coincidir con el valor del ATRIBUTO 'name' de cada input. Es decir, 'event.target.name' debe ser los mismo/refierir al atributo name que pones en el input.
+      [event.target.name]: event.target.value,
+      filteredNews: this.state.news.filter(item => {
+        if (item.title.toLowerCase().includes(this.state.search.toLowerCase())) {
+          return true
+        }
+        return false
+      })
     });
     console.log(this.state.search);
   }
@@ -77,7 +68,6 @@ class App extends Component {
         <Navbar
           title='News US'
         />
-
         <form className="form-inline my-2 my-lg-0">
           <input className="form-control mr-sm-2"
             name="search"
@@ -93,11 +83,13 @@ class App extends Component {
             getNews={this.getNews}
             updateView={(newView) => this.updateView(newView)}
           />
+
           <NewsList
             news={this.state.filteredNews}
             defaultView={this.state.defaultView}
             updateView={(newView) => this.updateView(newView)}
           />
+
         </div>
 
         <Footer className='container' />
@@ -106,5 +98,4 @@ class App extends Component {
     )
   }
 }
-
 export default App;
