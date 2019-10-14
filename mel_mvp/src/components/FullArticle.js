@@ -17,7 +17,7 @@ const FullArticle = ({ article }) => {
   // show author only if available - use ternary operator
 
   const showAuthor = author ? (
-    <h6>{author}, </h6>
+    <h6 className="source-name">{author}, </h6>
 
   ) : null;
 
@@ -25,7 +25,7 @@ const FullArticle = ({ article }) => {
     <div className='container bg-white news-container'>
 
       {image}
-      <h6 className="source-name">{showAuthor} {source.name}.</h6>
+      {showAuthor}<h6 className="source-name">{source.name}.</h6>
       <p>{publishedAt}</p>
 
       <h1 className="font-weight-bold">{title}</h1>

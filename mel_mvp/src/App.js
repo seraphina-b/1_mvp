@@ -12,6 +12,7 @@ class App extends Component {
 
     this.state = {
       news: [],
+
     }
   }
 
@@ -45,6 +46,7 @@ class App extends Component {
           />
           <NewsList
             news={this.state.news}
+            defaultView={this.state.defaultView}
           />
         </div>
 
