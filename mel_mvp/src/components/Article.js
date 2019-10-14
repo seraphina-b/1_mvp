@@ -3,9 +3,7 @@ import {
   FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
-  WhatsappShareButton
-} from 'react-share';
-import {
+  WhatsappShareButton,
   FacebookIcon,
   TwitterIcon,
   WhatsappIcon,
@@ -40,18 +38,18 @@ class Article extends Component {
               onClick={() => this.props.handleRead(this.props.article)}
             // handleRead está enviando a su padre NewsList.js las props ARTICLE que le llegan del padre 
             >Read Article</button>
-            <div>
+            <div className="social-media">
               <FacebookShareButton url={this.props.article.url}>
-                <FacebookIcon size={32} round={true} />
+                <FacebookIcon size={26} round={true} />
               </FacebookShareButton>
               <TwitterShareButton url={this.props.article.url}>
-                <TwitterIcon size={32} round={true} />
+                <TwitterIcon size={26} round={true} />
               </TwitterShareButton>
               <WhatsappShareButton url={this.props.article.url}>
-                <WhatsappIcon size={32} round={true} />
+                <WhatsappIcon size={26} round={true} />
               </WhatsappShareButton>
               <LinkedinShareButton url={this.props.article.url}>
-                <LinkedinIcon size={32} round={true} />
+                <LinkedinIcon size={26} round={true} />
               </LinkedinShareButton>
             </div>
 
