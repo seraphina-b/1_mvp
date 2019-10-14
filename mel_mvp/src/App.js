@@ -66,7 +66,7 @@ class App extends Component {
     this.setState({
       [event.target.name]: event.target.value
 
-      //'name' corresponde a cada KEY dentro del objeto 'state'. Este 'name' tiene que coincidir con el valor del ATRIBUTO 'name' de cada input. Es decir, 'event.target.name' debe ser los mismo/refierir al atributo name que pones en cada input.
+      //'name' corresponde a cada KEY dentro del objeto 'state'. Este 'name' tiene que coincidir con el valor del ATRIBUTO 'name' de cada input. Es decir, 'event.target.name' debe ser los mismo/refierir al atributo name que pones en el input.
     });
     console.log(this.state.search);
   }

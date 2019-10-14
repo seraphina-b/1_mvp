@@ -77,3 +77,7 @@ body {
   text-decoration: none !important;
   color: #a09f9f !important;
 }
+
+.footer-link:hover {
+  color: #706f6f !important;
+}

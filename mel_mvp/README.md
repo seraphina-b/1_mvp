@@ -10,12 +10,13 @@ The result of this development project is an application for reading current new
 ## Future features
 
 - Add ‘Read Later’ / ‘Favourites’
-- Functional search bar
-- Include more countries (right now the app just gets news from US)
+- Functional search bar.
+- Include more countries (right now the app just gets news from US).
+- 'About' section: information about the company and contact form.
 
 ## Styling & presentation
 
-- Styling tools used: **Bootstrap & Bootswatch**
+- Tools used: **Bootstrap & Bootswatch**
 
 ## What I have learnt
 
