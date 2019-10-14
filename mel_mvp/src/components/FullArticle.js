@@ -28,10 +28,7 @@ const FullArticle = ({ article }) => {
       {showAuthor}<h6 className="source-name">{source.name}</h6><span>
         {publishedAt}
       </span>
-
-
-
-      <h1 className="font-weight-bold">{title}</h1>
+      <h1 className="font-weight-bold m3 mt-3 mb-3">{title}</h1>
       <p >{content}</p>
 
     </div>
