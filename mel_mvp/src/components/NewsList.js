@@ -42,7 +42,6 @@ class NewsList extends Component {
           )
         }
       </div>
-
     )
   }
 }
