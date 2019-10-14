@@ -1,6 +1,6 @@
 # Introduction
 
-The result of this development project is an application for reading current news. Objective: keep the reader informed.
+The result of this development project is an application for reading current news from US. The reader can choose between different news categories and search/filter them by title.
 
 ## Technical design
 
@@ -12,16 +12,21 @@ The result of this development project is an application for reading current new
 - Add ‘Read Later’ / ‘Favourites’
 - Include more countries (right now the app just gets news from US).
 - 'About' section: information about the company and contact form.
+- Improve styling.
 
-## Styling & presentation
+## Functionality
+
+Setup instructions----------------------------------------
+
+## Styling
 
 - Tools used: **Bootstrap & Bootswatch**
 
-## What I have learnt
+## Presentation - What I have learnt
 
 - Creative process
-- React
-- Review: Bootstrap & Bootswatch
+- React (mostly data flow between components)
+- Review: Bootstrap
 - Different features of NPM, e.g. share news in social media using 'react-share'.
 
 This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona.
