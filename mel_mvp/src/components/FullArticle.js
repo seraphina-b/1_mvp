@@ -9,16 +9,23 @@ const FullArticle = ({ article }) => {
 
   const image = urlToImage ? (
     <div>
-      <img src={urlToImage} alt={title} />
+      <img src={urlToImage} alt={title} className="img-responsive fit-image" />
 
     </div>
+  ) : null;
+
+  // show author only if available - use ternary operator
+
+  const showAuthor = author ? (
+    <h6>{author}, </h6>
+
   ) : null;
 
   return (
     <div className='container bg-white news-container'>
 
       {image}
-      <h6 className="source-name">{author}, {source.name}.</h6>
+      <h6 className="source-name">{showAuthor} {source.name}.</h6>
       <p>{publishedAt}</p>
 
       <h1 className="font-weight-bold">{title}</h1>
@@ -26,7 +33,6 @@ const FullArticle = ({ article }) => {
 
     </div>
   );
-
 }
 
 export default FullArticle;

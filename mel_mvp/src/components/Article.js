@@ -54,12 +54,7 @@ class Article extends Component {
   constructor(props) {
     super(props)
     this.state = {
-
     }
-  }
-
-  handleRead() {
-
   }
 
   render() {
@@ -79,10 +74,9 @@ class Article extends Component {
             <h5 className="card-title font-weight-bold">{this.props.article.title}</h5>
             <p className="card-text">{this.props.article.description}</p>
             <button
-              // target='_blank'
-              // rel='noopener noreferrer'
               className="btn btn-primary text-white"
-            // onClick={}  la función que se invoque en onclick (handleRead()) tiene que ...???? tiene que enviar algo a su padre newsList para que muestre el correspondiente 'FullArticle'. 
+              onClick={() => this.props.handleRead(this.props.article)}
+            // handleRead está enviando a su padre NewsList.js las props ARTICLE que le llegan del padre 
             >Read Article</button>
             <button
               className="btn btn-primary text-white"

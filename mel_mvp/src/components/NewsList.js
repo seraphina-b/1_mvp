@@ -2,31 +2,21 @@ import React, { Component } from 'react';
 import Article from './Article';
 import FullArticle from './FullArticle';
 
-// const NewsList = ({ news }) => { //news es el prop que se pasa dsd app.js
-//   return (
-//     <div className='row'>
-//       {news.map(article =>
-
-//         <Article
-//           key={article.url} // url as key bc is unique
-//           article={article}
-//         />
-//       )}
-
-//     </div>
-//   );
-// }
-
-// export default NewsList;
-
-
 class NewsList extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      defaultView: true
+      defaultView: true,
+      selectedArticle: {}
     }
+  }
+
+  selectArticle(article) { //selectArticle acepta un argumento "article", y lo usa para cambiar el estado de selectedArticle
+    this.setState({
+      defaultView: false,
+      selectedArticle: article
+    })
   }
 
   render() {
@@ -40,14 +30,14 @@ class NewsList extends Component {
               <Article
                 key={article.url} // url as key bc is unique
                 article={article}
+                handleRead={(selected) => this.selectArticle(selected)} //handleRead en Article.js envía al padre NewsList.js el artículo seleccionado para renderizar en grande, aquí lo he llamado selected. Le paso "selected" al método selectedArticle()
               />
             )}
           </div>
 
         ) : (
-            null //aquí irá FullArticle ??, cuando defaultView sea false? tengo q pasarle las props. Las props que tengo que pasar son las mismass que les paso al componente "Article", debo pasar el resultado de map, es decir: article.
-            //<FullArticle
-            // />
+
+            <FullArticle article={this.state.selectedArticle} /> //a FullArticle.js le pasamos "article" como prop, que es el estado de selectedArticle, que a su vez (y resumiendo) es el artículo que nos llega de Article.js
           )
         }
       </div>
