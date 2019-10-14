@@ -7,23 +7,24 @@ class NewsList extends Component {
     super(props)
 
     this.state = {
-      defaultView: true,
+
       selectedArticle: {}
     }
   }
 
   selectArticle(article) { //selectArticle acepta un argumento "article", y lo usa para cambiar el estado de selectedArticle
     this.setState({
-      defaultView: false,
       selectedArticle: article
     })
+
+    this.props.updateView(false)
   }
 
   render() {
     return (
       <div >
 
-        {this.state.defaultView ? (
+        {this.props.defaultView ? (
           <div className='row'>
             {this.props.news.map(article =>
 
