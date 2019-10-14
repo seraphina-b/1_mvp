@@ -1,4 +1,4 @@
-# Introduction
+# News US App
 
 The result of this development project is an application for reading current news from US. The reader can choose between different news categories and search/filter them by title.
 
