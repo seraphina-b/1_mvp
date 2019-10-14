@@ -88,7 +88,7 @@ class App extends Component {
           <button className="btn btn-success my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
         </form>
 
-        <div className='container bg-white news-container'> {/*need bootsrap class CONTAINER, dentro ROW (NewsList.js) y luego COL (Article.js)*/}
+        <div className='container bg-light news-container'> {/*need bootsrap class CONTAINER, dentro ROW (NewsList.js) y luego COL (Article.js)*/}
           <Categories
             getNews={this.getNews}
             updateView={(newView) => this.updateView(newView)}
