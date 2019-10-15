@@ -53,7 +53,7 @@ class App extends Component {
     this.setState({
       [event.target.name]: event.target.value,
       filteredNews: this.state.news.filter(item => {
-        if (item.title.toLowerCase().includes(this.state.search.toLowerCase())) {
+        if (item.title.toLowerCase().includes(event.target.value.toLowerCase())) {
           return true
         }
         return false
