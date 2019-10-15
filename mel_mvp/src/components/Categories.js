@@ -26,7 +26,7 @@ class Categories extends Component {
       <div className='row searcher'>
         <div className='col-sm-12 col-md-8'>
           <form>
-            <h2>Find News by Category</h2>
+            <h2 className="font-weight-bold">Find News by Category</h2>
 
             <div className="input-group mb-3">
               <select

@@ -17,7 +17,7 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand font-weight-bold" href="#"><i class="far fa-newspaper"></i> {this.props.title}</a>
+        <div className="navbar-brand font-weight-bold text-success" href="#"><i class="far fa-newspaper"></i> {this.props.title}</div>
 
         <div className="collapse navbar-collapse" id="navbarColor03">
           <ul className="navbar-nav mr-auto">
@@ -37,7 +37,6 @@ class Navbar extends Component {
               type="text"
               placeholder="Search"
               onChange={e => this.handleInputChange(e)} />
-            <button className="btn btn-success my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
           </form>
         </div>
       </nav>
