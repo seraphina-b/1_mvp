@@ -54,19 +54,6 @@ class App extends Component {
     })
   }
 
-  // handleInputChange(event) {
-  //   this.setState({
-  //     [event.target.name]: event.target.value,
-  //     filteredNews: this.state.news.filter(item => {
-  //       if (item.title.toLowerCase().includes(event.target.value.toLowerCase())) {
-  //         return true
-  //       }
-  //       return false
-  //     })
-  //   });
-  //   console.log(this.state.search);
-  // }
-
   updateSearch(newSearch) {
     this.setState({
       search: newSearch,
@@ -93,7 +80,7 @@ class App extends Component {
             getNews={this.getNews}
             updateView={(newView) => this.updateView(newView)}
           />
-          {/*loading - ternary operator*/}
+          {/*I it's NOT loading show NewsList, otherwise show spinner*/}
           {!this.state.loading ? (
             <NewsList
               news={this.state.filteredNews}
@@ -101,8 +88,10 @@ class App extends Component {
               updateView={(newView) => this.updateView(newView)}
             />
           ) : (
-              <div className="spinner-border text-success" role="status">
-                <span className="sr-only">Loading...</span>
+              <div className="d-flex justify-content-center">
+                <div className="spinner-border text-success" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
               </div>
             )}
 
