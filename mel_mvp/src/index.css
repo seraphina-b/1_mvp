@@ -81,13 +81,11 @@ body {
   background-color: #dfe0e1;
 }
 
-.footer-text {}
-
 .footer-link {
   text-decoration: none !important;
   color: #a09f9f !important;
 }
 
 .footer-link:hover {
-  color: #706f6f !important;
+  color: #56cc9d !important;
 }

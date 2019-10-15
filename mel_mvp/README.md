@@ -27,6 +27,6 @@ Setup instructions----------------------------------------
 - Creative process
 - React (mostly data flow between components)
 - Review: Bootstrap
-- Different features of NPM, e.g. share news in social media using 'react-share'.
+- Different features of NPM, e.g. share news in social media using ['react-share'](https://www.npmjs.com/package/react-share).
 
 This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona.
