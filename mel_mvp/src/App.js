@@ -22,7 +22,6 @@ class App extends Component {
     this.getNews();
   }
 
-
   getNews = async (category = 'general') => { //general is the default value for category
     const key = '3e11a22e58cd4a75bfbcb6a7b432027a'
     const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${key}`;
@@ -49,17 +48,29 @@ class App extends Component {
     })
   }
 
-  handleInputChange(event) {
+  // handleInputChange(event) {
+  //   this.setState({
+  //     [event.target.name]: event.target.value,
+  //     filteredNews: this.state.news.filter(item => {
+  //       if (item.title.toLowerCase().includes(event.target.value.toLowerCase())) {
+  //         return true
+  //       }
+  //       return false
+  //     })
+  //   });
+  //   console.log(this.state.search);
+  // }
+
+  updateSearch(newSearch) {
     this.setState({
-      [event.target.name]: event.target.value,
+      search: newSearch,
       filteredNews: this.state.news.filter(item => {
-        if (item.title.toLowerCase().includes(event.target.value.toLowerCase())) {
+        if (item.title.toLowerCase().includes(newSearch.toLowerCase())) {
           return true
         }
         return false
       })
-    });
-    console.log(this.state.search);
+    })
   }
 
   render() {
@@ -67,16 +78,9 @@ class App extends Component {
       <div>
         <Navbar
           title='News US'
+          search={this.state.search}
+          updateSearch={(newSearch) => this.updateSearch(newSearch)}
         />
-        <form className="form-inline my-2 my-lg-0">
-          <input className="form-control mr-sm-2"
-            name="search"
-            type="text"
-            placeholder="Search"
-            onChange={e => this.handleInputChange(e)}
-          />
-          <button className="btn btn-success my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
-        </form>
 
         <div className='container bg-light news-container'> {/*need bootsrap class CONTAINER, dentro ROW (NewsList.js) y luego COL (Article.js)*/}
           <Categories
