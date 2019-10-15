@@ -12,7 +12,6 @@ The result of this development project is an application for reading current new
 - Add ‘Read Later’ / ‘Favourites’
 - Include more countries (right now the app just gets news from US).
 - 'About' section: information about the company and contact form.
-- Improve styling.
 
 ## Setup
 
