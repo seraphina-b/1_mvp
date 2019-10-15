@@ -30,6 +30,6 @@ If you want to clone the repository in your computer: [Cloning a repository](htt
 - Creative process
 - React (mostly data flow between components)
 - Review: Bootstrap
-- Different features of NPM, e.g. share news in social media using ['react-share'](https://www.npmjs.com/package/react-share).
+- Different features of NPM. E.g. share news in social media using ['react-share'](https://www.npmjs.com/package/react-share) and change date format with ['Moment.js'](https://momentjs.com/).
 
 This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona.

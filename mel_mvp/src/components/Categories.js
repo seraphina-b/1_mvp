@@ -10,7 +10,6 @@ class Categories extends Component {
   }
 
   changeCategory = e => {
-    e.preventDefault(); // hace falta??
     this.setState({
       category: e.target.value
     }, () => { // PREGUNTAR ESTO! No acabo de entender...

@@ -14,7 +14,8 @@ class App extends Component {
       defaultView: true,
       news: [],
       filteredNews: [],
-      search: ''
+      search: '',
+      loading: false,
     }
   }
 
@@ -26,6 +27,10 @@ class App extends Component {
     const key = '3e11a22e58cd4a75bfbcb6a7b432027a'
     const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${key}`;
 
+    this.setState({
+      loading: true,
+    })
+
     const answer = await fetch(url);
     const news = await answer.json();
 
@@ -36,7 +41,8 @@ class App extends Component {
           return true
         }
         return false
-      })
+      }),
+      loading: false,
     })
     console.log(news.articles);
     console.log(this.state.filteredNews);
@@ -87,12 +93,19 @@ class App extends Component {
             getNews={this.getNews}
             updateView={(newView) => this.updateView(newView)}
           />
+          {/*loading - ternary operator*/}
+          {!this.state.loading ? (
+            <NewsList
+              news={this.state.filteredNews}
+              defaultView={this.state.defaultView}
+              updateView={(newView) => this.updateView(newView)}
+            />
+          ) : (
+              <div className="spinner-border text-success" role="status">
+                <span className="sr-only">Loading...</span>
+              </div>
+            )}
 
-          <NewsList
-            news={this.state.filteredNews}
-            defaultView={this.state.defaultView}
-            updateView={(newView) => this.updateView(newView)}
-          />
 
         </div>
 
