@@ -28,8 +28,7 @@ const FullArticle = ({ article }) => {
       {image}
       <h1 className="font-weight-bold m3 mt-3 mb-3">{title}</h1>
       <div className="written-date">
-        {showAuthor}<h6 className="source-name">{source.name}</h6><span>
-          - {moment(publishedAt).format('MMMM Do YYYY, H:mm')}h
+        {showAuthor}<h6 className="source-name">{source.name}</h6><span> - {moment(publishedAt).format('MMMM Do YYYY, H:mm')}h
         </span>
       </div>
 
