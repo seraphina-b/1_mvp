@@ -14,9 +14,12 @@ The result of this development project is an application for reading current new
 - 'About' section: information about the company and contact form.
 - Improve styling.
 
-## Functionality
+## Setup
 
-Setup instructions----------------------------------------
+1. Run `npm install` to install packages.
+2. Run `npm start` to run the server.
+
+If you want to clone the repository in your computer: [Cloning a repository](https://help.github.com/en/articles/cloning-a-repository)
 
 ## Styling
 
