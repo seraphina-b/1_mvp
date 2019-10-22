@@ -24,12 +24,22 @@ class Article extends Component {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ input: this.state.input })
+      body: JSON.stringify({ 
+        urlToImage: this.props.article.urlToImage,
+        url: this.props.article.url,
+        title: this.props.article.title,
+        author: this.props.article.author,
+        source: this.props.article.source,
+        publishedAt: this.props.article.publishedAt,
+        description: this.props.article.description
+      })
     })
-    .then(res => res.json());
+    .catch(error => {
+      console.log(error);
+    });
     }
     
-  }
+  
 
   render() {
     const image = this.props.article.urlToImage ? (
@@ -69,7 +79,7 @@ class Article extends Component {
                 {/*<RedditShareButton url={"https://google.com"}>
                   <LinkedinIcon className="sm-icon" size={26} round={true}/>
     </RedditShareButton>*/}
-                <button className="btn btn-light" >Save me</button>
+                <button className="btn btn-light" onClick={this.saveArticle}>Save me</button>
                 
 
               </div>

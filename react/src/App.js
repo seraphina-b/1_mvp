@@ -17,7 +17,7 @@ class App extends Component {
       filteredNews: [],
       search: '',
       loading: false,
-      isSaved: false
+      isSaved: true
     }
   }
 

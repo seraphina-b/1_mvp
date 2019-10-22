@@ -20,6 +20,7 @@ class Saved extends React.Component {
     render() {
         return <div>
             Testing Testing 123
+            {this.state.articles.map(e => <div>{e.title}</div>)}
         </div>
     }
 }
