@@ -4,7 +4,7 @@ import moment from 'moment';
 const FullArticle = ({ article }) => {
 
   // extreaer datos
-  const { urlToImage, title, author, source, publishedAt, content } = article;
+  const { urlToImage, url, title, author, source, publishedAt, description } = article;
 
   // show image only if available - use ternary operator
 
@@ -29,10 +29,11 @@ const FullArticle = ({ article }) => {
       <h1 className="font-weight-bold m3 mt-3 mb-3">{title}</h1>
       <div className="written-date">
         {showAuthor}<h6 className="source-name">{source.name}</h6><span> - {moment(publishedAt).format('MMMM Do YYYY, H:mm')}h
-        </span>
+        </span> 
       </div>
-
-      <p >{content}</p>
+     
+      <span>{description + " "}</span>
+      <a href={url}>Keep Reading</a>
 
     </div>
   );

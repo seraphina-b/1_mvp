@@ -4,6 +4,7 @@ import {
   LinkedinShareButton,
   TwitterShareButton,
   WhatsappShareButton,
+  RedditShareButton,
   FacebookIcon,
   TwitterIcon,
   WhatsappIcon,
@@ -15,6 +16,19 @@ class Article extends Component {
     super(props)
     this.state = {
     }
+  }
+
+  saveArticle = () => {
+    fetch("/api/news", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ input: this.state.input })
+    })
+    .then(res => res.json());
+    }
+    
   }
 
   render() {
@@ -52,6 +66,12 @@ class Article extends Component {
                 <LinkedinShareButton url={this.props.article.url}>
                   <LinkedinIcon className="sm-icon" size={26} round={true} />
                 </LinkedinShareButton>
+                {/*<RedditShareButton url={"https://google.com"}>
+                  <LinkedinIcon className="sm-icon" size={26} round={true}/>
+    </RedditShareButton>*/}
+                <button className="btn btn-light" >Save me</button>
+                
+
               </div>
             </div>
 

@@ -1,0 +1,23 @@
+{
+  "name": "1_mvp",
+  "version": "1.0.0",
+  "description": "A news aggregator website.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seraphina-b/1_mvp.git"
+  },
+  "author": "Seraphina I. Botero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seraphina-b/1_mvp/issues"
+  },
+  "homepage": "https://github.com/seraphina-b/1_mvp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  }
+}

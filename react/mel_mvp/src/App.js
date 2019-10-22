@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import NewsList from './components/NewsList';
 import Categories from './components/Categories';
 import Footer from './components/Footer';
+import Saved from "./components/Saved";
 
 // import './App.css';
 
@@ -16,6 +17,7 @@ class App extends Component {
       filteredNews: [],
       search: '',
       loading: false,
+      isSaved: false
     }
   }
 
@@ -33,6 +35,7 @@ class App extends Component {
 
     const answer = await fetch(url);
     const news = await answer.json();
+    console.log(news);
 
     this.setState({
       news: news.articles,
@@ -76,10 +79,12 @@ class App extends Component {
         />
 
         <div className='container bg-light news-container'> {/*need bootsrap class CONTAINER, dentro ROW (NewsList.js) y luego COL (Article.js)*/}
+          {!this.state.isSaved ? (
           <Categories
             getNews={this.getNews}
             updateView={(newView) => this.updateView(newView)}
-          />
+          /> 
+          ) : <Saved> </Saved> }
           {/*I it's NOT loading show NewsList, otherwise show spinner*/}
           {!this.state.loading ? (
             <NewsList
@@ -101,7 +106,7 @@ class App extends Component {
         <Footer className='container' />
 
       </div>
-    )
+    ) 
   }
 }
 export default App;
